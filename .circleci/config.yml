@@ -1,16 +1,19 @@
 version: 2
 jobs:
-   build:
+    build:
+      working_directory: ~/my-build
+      # Custom docker container
       docker:
        - image: michaelpear/ccsv7build:v1
-       - working_directory: ~/my-build
+#Steps just checkout and run build commands
       steps:
        - checkout
-       - run: 
-          name: CCS Build
+       - run:
+          shell: /bin/bash
+          name: CCS-Build
           command: |
-          echo Running Import
-          mkdir -p /tmp/ccsworkspace
-          /opt/ti/ccsv7/eclipse/eclipse  -noSplash -data "/tmp/ccsworkspace" -application com.ti.ccstudio.apps.projectImport -ccs.location "/my-build" -ccs.copyIntoWorkspace
-          /opt/ti/ccsv7/eclipse/eclipse  -noSplash -consoleLog -data "/tmp/ccsworkspace" -application com.ti.ccstudio.apps.projectBuild -ccs.workspace -ccs.buildType full
+            echo Running Import
+            mkdir -p /tmp/ccsworkspace
+            /opt/ti/ccsv7/eclipse/eclipse  -noSplash  -data "/tmp/ccsworkspace" -application com.ti.ccstudio.apps.projectImport -ccs.location "/my-build" -ccs.copyIntoWorkspace
+            /opt/ti/ccsv7/eclipse/eclipse  -noSplash -consoleLog -data "/tmp/ccsworkspace" -application com.ti.ccstudio.apps.projectBuild -ccs.workspace -ccs.buildType full
 
