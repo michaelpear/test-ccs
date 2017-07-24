@@ -1,0 +1,12 @@
+/opt/ti/ccsv7/eclipse/eclipse  -noSplash -data "/ti" -application com.ti.ccstudio.apps.projectCreate -ccs.name newProject -ccs.device com.ti.ccstudio.deviceModel.C2000.GenericC28xxDevice
+/opt/ti/ccsv7/eclipse/eclipse  -noSplash -data "/ti" -application com.ti.ccstudio.apps.projectCreate -ccs.name newProject -ccs.device com.ti.ccstudio.deviceModel.C2000.GenericC28xxDevice
+/opt/ti/ccsv7/eclipse/eclipse  -noSplash -data "/ti" -application com.ti.ccstudio.apps.projectCreate -ccs.name newProject -ccs.device com.ti.ccstudio.deviceModel.C2000.GenericC28xxDevice
+/opt/ti/ccsv7/eclipse/eclipse  -noSplash -data "/install/ccstest" -application com.ti.ccstudio.apps.projectImport -ccs.location "/install/RO_CSIO_TA0_RTC_One_Button" -ccs.copyIntoWorkspace 
+/opt/ti/ccsv7/eclipse/eclipse  -noSplash -data "/ti" -application com.ti.ccstudio.apps.projectImport -ccs.location "/install/RO_CSIO_TA0_RTC_One_Button" -ccs.copyIntoWorkspace 
+/opt/ti/ccsv7/eclipse/eclipse  -noSplash -consoleLog -data "/ti" -application com.ti.ccstudio.apps.projectBuild -ccs.workspace -ccs.buildType full
+/opt/ti/ccsv7/eclipse/eclipse  -noSplash -consoleLog -data "/ti" -application com.ti.ccstudio.apps.projectBuild -ccs.workspace -ccs.buildType full
+/opt/ti/ccsv7/eclipse/eclipse  -noSplash -consoleLog -data "/ti" -application com.ti.ccstudio.apps.projectBuild -ccs.workspace -ccs.buildType full -ccs.configuration Release
+/opt/ti/ccsv7/eclipse/eclipse  -noSplash -consoleLog -data "/ti" -application com.ti.ccstudio.apps.projectBuild -ccs.workspace -ccs.buildType full -ccs.configuration Release
+/opt/ti/ccsv7/eclipse/eclipse  -noSplash -consoleLog -data "/ti" -application com.ti.ccstudio.apps.projectBuild -ccs.workspace -ccs.buildType clean -ccs.configuration Release
+/opt/ti/ccsv7/eclipse/eclipse  -noSplash -consoleLog -data "/ti" -application com.ti.ccstudio.apps.projectBuild -ccs.workspace -ccs.buildType clean -ccs.configuration Debug
+ 
