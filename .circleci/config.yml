@@ -14,6 +14,7 @@ jobs:
           command: |
             echo Running Import
             mkdir -p /tmp/ccsworkspace
+            /opt/ti/ccsv7/eclipse/eclipse -noSplash -clean -clearPersistedState
             /opt/ti/ccsv7/eclipse/eclipse  -noSplash  -data "/tmp/ccsworkspace" -application com.ti.ccstudio.apps.projectImport -ccs.location "/my-build" -ccs.copyIntoWorkspace
             /opt/ti/ccsv7/eclipse/eclipse  -noSplash -consoleLog -data "/tmp/ccsworkspace" -application com.ti.ccstudio.apps.projectBuild -ccs.workspace -ccs.buildType full
 
