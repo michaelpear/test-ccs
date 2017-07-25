@@ -27,7 +27,7 @@ jobs:
             cp /tmp/ccsworkspace/RO_*/Release/*.out /tmp/artifacts;
 
 
-        - store_artifacts:
+       - store_artifacts:
             path: /tmp/artifacts
 
 
