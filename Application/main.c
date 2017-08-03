@@ -124,8 +124,7 @@ void main(void)
   TI_CAPT_Update_Baseline(&one_button,100);
 
   // Main loop starts here
-  //while (1)
-  whxxle (1)
+  while (1)
   {
   	
   	#ifdef ELEMENT_CHARACTERIZATION_MODE
