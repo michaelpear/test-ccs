@@ -9,9 +9,6 @@ jobs:
       steps:
        - checkout
        - run:
-          name: Install-ca-certificates
-          command: apt-get install -y ca-certificates
-       - run:
           shell: /bin/bash
           name: CCS-Build
           command: |
