@@ -4,7 +4,7 @@ jobs:
       working_directory: /tmp/my-build
       # Custom docker container
       docker:
-       - image: michaelpear/ccsv7build:v2
+       - image: michaelpear/ccsv7build:v3
 #Steps just checkout and run build commands
       steps:
        - checkout
