@@ -4,10 +4,17 @@ jobs:
       working_directory: /tmp/my-build
       # Custom docker container
       docker:
-       - image: michaelpear/ccsv7build:v3
+       - image: michaelpear/ccsv7build:v4
 #Steps just checkout and run build commands
       steps:
        - checkout
+
+       - run:
+          shell: /bin/bash
+          name: cppcheck analysis
+          command: |
+            /opt/cppcheck/bin/cppcheck --error-exitcode=1 .
+            
        - run:
           shell: /bin/bash
           name: CCS-Build
