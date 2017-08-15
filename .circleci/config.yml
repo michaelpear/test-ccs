@@ -13,7 +13,9 @@ jobs:
           shell: /bin/bash
           name: cppcheck analysis
           command: |
-            /opt/cppcheck/bin/cppcheck --error-exitcode=1 --enable=all --force --xml-version= --xml . 2>static-analysis-output.txt
+            /opt/cppcheck/bin/cppcheck --error-exitcode=1 --enable=all --force --xml-version=2 --xml . 2>static-analysis-output.txt
+            mkdir -p /tmp/artifacts
+            cp ./static-analysis-output.txt /tmp/artifacts
 
             
        - run:
@@ -33,7 +35,7 @@ jobs:
             echo Create artifacts area
             mkdir -p /tmp/artifacts
             cp /tmp/ccsworkspace/RO_*/Release/*.out /tmp/artifacts
-            cp./static-analysis-output.txt /tmp/artifacts
+           
 
 
        - store_artifacts:
