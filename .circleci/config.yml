@@ -9,13 +9,13 @@ jobs:
       steps:
        - checkout
 
-       - run:
-          shell: /bin/bash
-          name: cppcheck analysis
-          command: |
-            /opt/cppcheck/bin/cppcheck --error-exitcode=1 --enable=all --force --xml-version=2 --xml . 2>static-analysis-output.txt
-            mkdir -p /tmp/artifacts
-            cp ./static-analysis-output.txt /tmp/artifacts
+       #- run:
+       #   shell: /bin/bash
+       #   name: cppcheck analysis
+      #    command: |
+      #      /opt/cppcheck/bin/cppcheck --error-exitcode=1 --enable=all --force --xml-version=2 --xml . 2>static-analysis-output.txt
+       #     mkdir -p /tmp/artifacts
+       #     cp ./static-analysis-output.txt /tmp/artifacts
 
             
        - run:
